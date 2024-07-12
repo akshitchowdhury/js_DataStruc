@@ -8,17 +8,27 @@ class Array{
     }
 
  pushElem(element) {
-          element = this.data[this.length];
+    this.data[this.length] = element  ;
           this.length++;
-          return this.data;
+          return this.length;
+    }
+
+    popElem(){
+        const lastElem = this.data[this.length-1];
+        delete this.data[this.length-1];
+        this.length--;
+        return this.length;
     }
 }
 
 const arr = new Array()
 
-arr.push(12)
-arr.push(13)
-arr.push(14)
-arr.push(15)
+arr.pushElem(12)
+arr.pushElem(13)
+arr.pushElem(14)
+arr.pushElem(15)
 
+console.log(arr)
+
+arr.popElem()
 console.log(arr)
