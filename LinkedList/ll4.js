@@ -77,7 +77,7 @@ function insertAtPosition(head, position, newData, size){
 
     else{
         let curr = head;
-        for(let i =1; i< position; ++i){
+        for(let i =1; i< position; i++){
             curr = curr.next;
         }
 
