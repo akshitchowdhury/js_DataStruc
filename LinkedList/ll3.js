@@ -1,7 +1,7 @@
 class Node{
     
     constructor(newData){
-        this.newData = data;
+        this.data = newData;
         this.next = null;
     }
 }
@@ -23,13 +23,27 @@ function listTravel(head){
 
     while(current!= null){
 
-        result+= ""+current.data;
+        result += ""+current.data;
         current = current.next;
     }
 
     console.log(result)
 }
 
+function insertAtEnd(newData, head){
+    let current = head;
+    
+    let lastNode = new Node(newData);
+    while(current.next!=null){
+        current = current.next;
+        
+    }
+
+    current.next = lastNode;
+
+    return lastNode;
+    
+}
 
 function main(){
 
@@ -38,9 +52,14 @@ function main(){
     Header.next.next = new Node(3);
     Header.next.next.next = new Node(4);
 
-    printList(Header);
+    listTravel(Header);
 
     Header = insertAtFront(Header, 10)
 
-    printList(Header);
+    listTravel(Header);
+
+    insertAtEnd(20,Header)
+    listTravel(Header);
 }
+
+main()
