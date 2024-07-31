@@ -29,15 +29,15 @@ function printList(head){
 }
 
 function main(){
-    let head = new Node(1);
-    head.next = new Node(2);
-    head.next.next = new Node(3);
-    head.next.next.next = new Node(4);
+    let header = new Node(1);
+    header.next = new Node(2);
+    header.next.next = new Node(3);
+    header.next.next.next = new Node(4);
 
-    printList(head)
-head = insertNodeFront(head,10)
+    printList(header)
+    header = insertNodeFront(header,10)
 
-printList(head)
+printList(header)
 }
 
 main()
