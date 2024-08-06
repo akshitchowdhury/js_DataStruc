@@ -38,6 +38,33 @@ function deleteFromLast(head){
     return head;
 }
 
+function deleteFromMiddle(head, position){
+
+    let curr = head;
+    let prev = null
+
+    if(prev<=0 || head===null){
+        return head;
+    }
+
+    if(position===1){
+        return head.next;
+    }
+
+    for(let i=0; i<position && curr!=null; i++){
+        prev = curr;
+        curr = curr.next;
+    }
+
+    if(curr===null){
+        return head;
+    }
+
+    prev.next = curr.next;
+
+    return head;
+}
+
 
 function printList(head){
 
