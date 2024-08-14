@@ -1,0 +1,2 @@
+//  Given a string, write a function to remove adjacent duplicate characters, such that each character is only followed by one of itself. 
+// Use a Set to keep track of characters as you iterate through the string.
