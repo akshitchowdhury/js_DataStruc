@@ -8,8 +8,6 @@ let arr4 = [11,12,13,14,0]
 
 let uniqueSet = new Set([...arr1,...arr2,...arr3,...arr4])
 
-let uniqueArr = []
-
-uniqueSet.forEach(uniqueArr.push(e))
+let uniqueArr = Array.from(uniqueSet)
 
 console.log(uniqueArr)
